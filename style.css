@@ -1,0 +1,116 @@
+/* File: style.css */
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "left-menu content right-menu"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100vh;
+    gap: 10px;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd1dc; /* Pastel pink */
+    padding: 20px;
+}
+
+.header img {
+    border-radius: 50%;
+}
+
+.header h1 {
+    margin: 10px 0;
+}
+
+/* Menus */
+.left-menu, .right-menu {
+    padding: 10px;
+}
+
+.left-menu {
+    grid-area: left-menu;
+    background-color: #ffebd9; /* Pastel peach */
+}
+
+.right-menu {
+    grid-area: right-menu;
+    background-color: #ffd1a9; /* Light pastel peach */
+}
+
+.left-menu ul, .right-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-menu li, .right-menu li {
+    margin-bottom: 10px;
+}
+
+.left-menu a, .right-menu a {
+    color: #333;
+    text-decoration: none;
+}
+
+.left-menu a:hover, .right-menu a:hover {
+    color: #007acc;
+    text-decoration: underline;
+}
+
+/* Content */
+.content {
+    grid-area: content;
+    padding: 20px;
+}
+
+#about {
+    background-color: #e6eaf2; /* Pastel blue */
+}
+
+#achievements {
+    background-color: #d9f7d9; /* Pastel green */
+}
+
+#interests {
+    background-color: #f2e6f4; /* Light pastel purple */
+}
+
+.content section {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.drawing-images img, .reading-images img, .coding-images img {
+    width: 100px; /* Set a consistent size for all images */
+    height: 100px;
+    margin-right: 10px; /* Add spacing between images */
+}
+
+.drawing-images, .reading-images, .coding-images {
+    display: flex; /* Ensure images are displayed in a row */
+    margin-bottom: 10px; /* Space between image rows */
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #d2f5e3; /* Pastel green */
+    padding: 10px;
+    text-align: center;
+}
+
+/* General styling */
+body, html {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+}
